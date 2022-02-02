@@ -29,6 +29,6 @@ $(document).ready(function(){
         var next = ($('.active').next().length > 0) ? $('.active').next() : $('.first-img');
 
         active.removeClass('active');
-        next.addClass('active');
+        next.addClass('active active animate__animated animate__slideInRight');
     }
 });
