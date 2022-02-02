@@ -18,3 +18,17 @@ $(document).ready(function(){
         }
     })
 })
+
+$(document).ready(function(){
+
+    setInterval(swapImages,5000);
+
+    function swapImages(){
+
+        var active = $('.active'); 
+        var next = ($('.active').next().length > 0) ? $('.active').next() : $('.first-img');
+
+        active.removeClass('active');
+        next.addClass('active');
+    }
+});
