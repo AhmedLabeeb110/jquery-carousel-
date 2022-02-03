@@ -47,3 +47,17 @@ h1{
     margin-right: -45px;
     z-index: 100;
 }
+.dot{
+    height: 18px;
+    width: 18px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 50%;
+    display: inline-flex;
+    position: relative;
+    right: 23%;
+    top: 250px;
+}
+
+.dot:hover{
+    background-color: blue;
+}

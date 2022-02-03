@@ -17,11 +17,32 @@ $(document).ready(function(){
             prevImg.addClass('active animate__animated animate__slideInLeft').css('z-index', 10);
         }
     })
+
+    //For clicks on the dots
+
+    $('.next-dot').on('click', function(){
+        var currentImg = $('.active');
+        var nextImg = currentImg.next();
+
+        if(nextImg.length){
+            currentImg.removeClass('active').css('z-index', -10);
+            nextImg.addClass('active animate__animated animate__slideInRight').css('z-index', 10);
+        }
+    })
+    $('.prev-dot').on('click', function(){
+        var currentImg = $('.active');
+        var prevImg = currentImg.prev();
+    
+        if(prevImg.length){
+            currentImg.removeClass('active').css('z-index', -10);
+            prevImg.addClass('active animate__animated animate__slideInLeft').css('z-index', 10);
+        }
+    })
 })
 
 $(document).ready(function(){
 
-    setInterval(swapImages,5000);
+    setInterval(swapImages,8000);
 
     function swapImages(){
 
